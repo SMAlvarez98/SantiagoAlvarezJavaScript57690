@@ -1,4 +1,37 @@
+// Declaracion de variables.
+let precio = 421741
+let precio3 = precio / 3
+let precio6 = precio / 6
+let precio12 = precio / 12
+let precio18 = precio / 18
 
+// Se le pide al usuario mediante la funcion prompt, que ingrese su nombre.
+let usuario= prompt("Bienvenido a Guitarras Alvarez. Por favor ingresa tu nombre");
+alert("Bienvenido/a " + usuario);
+// Se le informa al usuario el precio final del producto. A continuacion, mediante la funcion prompt, se le pide que ingrese la cantidad de cuotas.
+let cuotas = parseInt (prompt('El precio final de la guitarra modelo Gandorcha SG 3000 es de 421741 ¿En cuantas cuotas le gustaría pagarlo? (0, 3, 6, 12, 18)'));
+// Ciclo condicional basado en la cantidad de cuotas que el cliente desee.
+while (cuotas != 0 && cuotas != 3 && cuotas != 6 && cuotas != 12 &&  cuotas != 18) {
+    // Bloque de ejecucion
+    prompt('Por favor, ingrese un numero de cuotas valido (0, 3, 6, 12, 18)');
+    // Condicion de salaida
+    cuotas = prompt ('Por favor, ingrese un numero de cuotas valido (0, 3, 6, 12, 18)')
+}
+if (cuotas == 0) {
+    alert('El precio final es de ' + precio)
+}
+if (cuotas == 3) {
+    alert('El precio final es de ' + precio3.toFixed(2))
+}
+if (cuotas == 6) {
+    alert('El precio final es de ' + precio6.toFixed(2))
+}
+if (cuotas == 12) {
+    alert('El precio final es de ' + precio12.toFixed(2))
+}
+if (cuotas == 18) {
+    alert('El precio final es de ' + precio18.toFixed(2))
+}
 
 //condicion, si es verdadera, si es falsa
 
