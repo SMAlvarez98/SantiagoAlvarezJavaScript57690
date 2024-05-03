@@ -1,9 +1,9 @@
-// Declaracion de variables.
-let precio = 421741
-let precio3 = precio / 3
-let precio6 = precio / 6
-let precio12 = precio / 12
-let precio18 = precio / 18
+/* // Declaracion de variables.
+const precio = 421741
+const precio3 = precio / 3
+const precio6 = precio / 6
+const precio12 = precio / 12
+const precio18 = precio / 18
 
 // Se le pide al usuario mediante la funcion prompt, que ingrese su nombre.
 let usuario= prompt("Bienvenido a Guitarras Alvarez. Por favor ingresa tu nombre");
@@ -17,21 +17,28 @@ while (cuotas != 0 && cuotas != 3 && cuotas != 6 && cuotas != 12 &&  cuotas != 1
     // Condicion de salaida
     cuotas = prompt ('Por favor, ingrese un numero de cuotas valido (0, 3, 6, 12, 18)')
 }
-if (cuotas == 0) {
-    alert('El precio final es de ' + precio)
+function calcularPrecioFinal(){
+    if (cuotas == 0) {
+        alert('El precio final es de ' + precio)
+    }
+    if (cuotas == 3) {
+        alert('El precio final es de ' + precio3.toFixed(2))
+    }
+    if (cuotas == 6) {
+        alert('El precio final es de ' + precio6.toFixed(2))
+    }
+    if (cuotas == 12) {
+        alert('El precio final es de ' + precio12.toFixed(2))
+    }
+    if (cuotas == 18) {
+        alert('El precio final es de ' + precio18.toFixed(2))
+    }
 }
-if (cuotas == 3) {
-    alert('El precio final es de ' + precio3.toFixed(2))
-}
-if (cuotas == 6) {
-    alert('El precio final es de ' + precio6.toFixed(2))
-}
-if (cuotas == 12) {
-    alert('El precio final es de ' + precio12.toFixed(2))
-}
-if (cuotas == 18) {
-    alert('El precio final es de ' + precio18.toFixed(2))
-}
+calcularPrecioFinal() */
+
+
+
+
 
 //condicion, si es verdadera, si es falsa
 
@@ -282,4 +289,106 @@ let ferrari = new Coche("Ferrari", "Rojo") */
 for(const x in persona){
     console.log(persona.x);
 } */
+
+// CLASE 6 ARRAYS ------------------------------------------------
+//Los arrays van con []
+
+/* let lista = ["harina", "huevos", "lechuga",123,true]
+//indices       0          1         2      3   4
+
+alert(lista[2]) */
+
+/* let frutas = ["manzana", "pera", "banana", "sandia"]
+//               0         1         2         3
+
+frutas[2]="kiwi" */
+
+/* let lista1 = [1,2,3]
+let lista2 = [4,5,6]
+let respuesta = lista1[1]+lista2[2] */
+
+/* const numeros = [1,2,3,4,5,6]
+for(let i=0; i < 5; i++){
+    console.log(numeros[i]);
+} */
+
+
+
+/* let frutas = ["manzana", "pera", "banana", "sandia",54,54,354,153,435,453,4,54,531,534,54,35,43,4,54,84,84,35,432,153,1,864,87,54,5,4,87,654,35,165,74,87,564,534,5]
+
+console.log(frutas); */
+
+/* for(let i =0; i<frutas.length;i++){
+    console.log(frutas[i]);
+} */
+
+/* let carritoDeCompras = ["manzana", "pera", "banana", "sandia"]
+
+console.log(carritoDeCompras);
+//carritoDeCompras.push //agrega uno nuevo
+
+carritoDeCompras.pop() //elimina el ultimo
+
+carritoDeCompras.shift()// saca el primero
+carritoDeCompras.unshift */
+
+//splice permite eliminar elementos de un array en cualquier posicion
+
+/* const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"]
+nombres.splice(1, 2) //desde la posicion 1, elimina 2 para adelante. Pedro el 1 Miguel el 2
+
+console.log(nombres);
+//["Rita", "Ana", "Vanesa"] */
+
+//Join: permite generar un string con todos los elementos del array --------
+
+/* const nombres = ["Luis", "Ana", "Julia", "Juan"]
+
+console.log(nombres.join(", "));
+//Luis, Ana, Julia, Juan
+console.log(nombres.join("*"));
+//Luis*Ana*Julia*Juan */
+
+//Concat: concatenar arrays ------------------
+
+/* const perros = ["Puppy", "Ronnie"]
+const gatos = ["Mishi", "Garfield", "Zuri"]
+const mascotas = perros.concat(gatos)
+console.log(mascotas);
+//["Puppy", "Ronnie", "Mishi", "Garfield", "Zuri"] */
+
+
+
+//Slice: devuelve una copia de una parte del array dentro de un nuevo array empezando por el inicio hasta el fin
+
+/* const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"]
+const masculinos = nombres.slice(1,3) //crea una copia desde la posicion 1 hasta la 3 SIN INCLUIR LA POSICION 3
+//masculinos contiene ["Pedro", "Miguel"] */
+
+
+
+//IndexOf: Nos permite obtener el indice de un elemento del array. Recibe por parametro el elemento que queremos buscar y en caso de existir nos dice en que indice está. Si el elemento no existe, nos tira un elemento negativo
+
+/* const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"]
+console.log(nombres.indexOf("Rita"));// 0
+console.log(nombres.indexOf("Ana"));//  3
+console.log(nombres.indexOf("julieta"));// -1 */
+
+//Includes: Vas al array y te fijas si se incluye el parametro que le mandamos
+
+/* const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"]
+console.log(nombres.includes("Rita"));     // ture
+console.log(nombres.includes("Miguel"));   // true
+console.log(nombres.includes("Julieta"));  // false */
+
+//reverse: Invierte el orden del array-------------------------------------
+
+/* const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"]
+nombres.reverse()
+console.log(nombres);
+// ['Vanesa', 'Ana', 'Miguel', 'Pedro', 'Rita'] */
+
+
+
+
 
