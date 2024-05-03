@@ -1,4 +1,4 @@
-/* // Declaracion de variables.
+// Declaracion de variables.
 const precio = 421741
 const precio3 = precio / 3
 const precio6 = precio / 6
@@ -17,6 +17,7 @@ while (cuotas != 0 && cuotas != 3 && cuotas != 6 && cuotas != 12 &&  cuotas != 1
     // Condicion de salaida
     cuotas = prompt ('Por favor, ingrese un numero de cuotas valido (0, 3, 6, 12, 18)')
 }
+
 function calcularPrecioFinal(){
     if (cuotas == 0) {
         alert('El precio final es de ' + precio)
@@ -34,7 +35,8 @@ function calcularPrecioFinal(){
         alert('El precio final es de ' + precio18.toFixed(2))
     }
 }
-calcularPrecioFinal() */
+calcularPrecioFinal()
+
 
 
 
