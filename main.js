@@ -1,4 +1,6 @@
-// Declaracion de variables.
+// PRIMER ENTREGA
+
+/* // Declaracion de variables.
 const precio = 421741
 const precio3 = precio / 3
 const precio6 = precio / 6
@@ -35,12 +37,48 @@ function calcularPrecioFinal(){
         alert('El precio final es de ' + precio18.toFixed(2))
     }
 }
-calcularPrecioFinal()
+calcularPrecioFinal() */
 
 
+// SEGUNDA ENTREGA
 
+const Producto = function (nombre,precio,stock){
+    this.nombre = nombre
+    this.precio = precio
+    this.stock = stock
+}
+let producto1 = new Producto ("lenovo", 195000, 20)
+let producto2 = new Producto ("samsung", 45500, 26)
+let producto3 = new Producto ("macbook", 700000, 45)
+let producto4 = new Producto ("xiaomi", 350000, 23)
+let lista = [producto1, producto2, producto3, producto4]
 
+function filtrarProductos(){
+    let palabraClave = prompt("Ingresá el nombre del producto").toUpperCase().trim()
+    let resultado = lista.filter((x)=>x.nombre.toUpperCase().includes(palabraClave))
+    if(resultado.length >0){
+        console.table(resultado)
+    }else {
+        alert("No existe ninguna coincidencia con " + palabraClave)
+    }
+}
 
+function agregarProducto(){
+    let nombre = prompt("Ingresá el nombre del producto que queres agregar").toUpperCase()
+    let precio = parseFloat(prompt("Ingresá el precio del producto que queres agregar"))
+    let stock = parseInt(prompt("Ingresá el stock del producto que queres agregar"))
+    if(isNaN(precio) || isNaN(stock) || nombre==""){
+        alert("Uno o varios de los datos ingresados son incorrectos. Por favor ingresá datos valos.")
+        return
+    }
+    let producto = new Producto (nombre,precio,stock)
+    if(lista.some((x)=>x.nombre === producto.nombre)){
+        alert("Ya existe un producto con ese nombre. Por favor, ingresá otro.")
+        return
+    }
+    lista.push(producto)
+    console.table(lista)
+}
 
 //condicion, si es verdadera, si es falsa
 
@@ -389,6 +427,49 @@ console.log(nombres.includes("Julieta"));  // false */
 nombres.reverse()
 console.log(nombres);
 // ['Vanesa', 'Ana', 'Miguel', 'Pedro', 'Rita'] */
+
+
+// CLASE 7 Funciones de Orden Superior------------------------------------
+
+// CLASE 8 Funciones de ORden Superior II --------------------------------
+
+//Objeto Math
+
+//console.log(Math);
+//console.log(Math.PI);
+//console.log(Math.abs(7.8)); //Devuelve un valor absoluto
+//console.log(Math.ceil(7.8));//Redonde arriba
+//console.log(Math.floor(7.8));//Redondea abajo
+//console.log(Math.round(7.5));// Redondea al mas cercano. 0.5 siempre redondea para arriba
+//console.log(Math.pow(2,5));//Devuelve 2 elevado a 5 
+//console.log(Math.sqrt(81));//Devuelve la raiz cuadrada
+
+//console.log(Math.random()*30+20);//Arranca en 30 + 20 posiciones. O sea entre 30 y 50
+//console.log(Math.round(Math.random()*30));//Para que no arroje numeros decimales
+
+/* const inicio = new Date()
+
+for (let i = 0; i < 1000; i++) {
+    console.log("haciendo tiempo")
+}
+
+const final = new Date()
+
+console.log("El proceso tardó: " + (final - inicio) + " milisegundos") */
+
+
+// CLASE 10 EVENTOS -------------------------------------------------------
+
+let botoncito = document.getElementById("botoncito")
+
+function perdiste(){
+    alert("The Game.")
+}
+
+botoncito.addEventListener("click",perdiste)
+
+
+
 
 
 
